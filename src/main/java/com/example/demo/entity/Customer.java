@@ -16,6 +16,7 @@ public class Customer {
 	private String address;
 	private String tel;
 	private String email;
+	private String password;
 	
 	/**
 	 * デフォルトコンストラクタ
@@ -34,6 +35,19 @@ public class Customer {
 		this.address = address;
 		this.tel = tel;
 		this.email = email;
+	}
+	
+	/**
+	 * コンストラクタ
+	 * @param name
+	 * @param address
+	 * @param tel
+	 * @param email
+	 * @param password
+	 */
+	public Customer(String name, String address, String tel, String email, String password) {
+		this(name, address, tel, email);
+		this.password = password;
 	}
 
 	public Integer getId() {
@@ -74,6 +88,14 @@ public class Customer {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 }

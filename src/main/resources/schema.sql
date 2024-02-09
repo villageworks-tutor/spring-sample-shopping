@@ -24,7 +24,8 @@ CREATE TABLE customers (
 	name TEXT, 
 	address TEXT,
 	tel TEXT,
-	email TEXT
+	email TEXT,
+	password TEXT
 );
 
 -- 注文テーブル
