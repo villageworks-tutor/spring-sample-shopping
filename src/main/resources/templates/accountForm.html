@@ -11,30 +11,33 @@
 		<article>
 			<section>
 				<h2>お客様情報</h2>
+				<ol class="error" th:if="${errorList}">
+					<li th:each="error:${errorList}" th:text="${error}"></li>
+				</ol>
 				<form action="/account" method="post">
 					<table border="1">
 						<tr>
 							<th>お名前</th>
 							<td>
-								<input type="text" name="name" />
+								<input type="text" name="name" th:value="${name}" />
 							</td>
 						</tr>
 						<tr>
 							<th>住所</th>
 							<td>
-								<input type="text" name="address" />
+								<input type="text" name="address" th:value="${address}" />
 							</td>
 						</tr>
 						<tr>
 							<th>電話番号</th>
 							<td>
-								<input type="text" name="tel" />
+								<input type="text" name="tel" th:value="${tel}" />
 							</td>
 						</tr>
 						<tr>
 							<th>e-mail</th>
 							<td>
-								<input type="text" name="email" />
+								<input type="text" name="email" th:value="${email}" />
 							</td>
 						</tr>
 						<tr>
